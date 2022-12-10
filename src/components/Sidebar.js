@@ -28,6 +28,17 @@ function Sidebar() {
         );
     }, []);
 
+
+    useEffect(() => {
+        const close = (e) => {
+            if (e.keyCode === 27)
+                setSettingsModal(false);
+
+        }
+        window.addEventListener('keydown', close)
+        return () => window.removeEventListener('keydown', close)
+    }, []);
+
     const handleAddChannel = () => {
         const channelName = prompt("Chat hinzufügen:");
 
@@ -38,7 +49,7 @@ function Sidebar() {
         }
     }
 
-    
+
 
     return (
         <div className='sidebar'>

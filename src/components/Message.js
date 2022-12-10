@@ -10,6 +10,7 @@ function Message({ timestamp, user, message }) {
         <h4>{user.displayName}
           <span className='message_time'>
             {new Date(timestamp?.toDate()).toLocaleString('de-DE', { timeZone: 'Europe/Berlin' })}
+            &nbsp;Uhr
           </span>
         </h4>
         <p>{message}</p>

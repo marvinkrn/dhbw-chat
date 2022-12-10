@@ -1,35 +1,78 @@
 :root {
-    --primary-color: #fff;
-    --secondary-color: gray;
-    --background-color: #2f3135;
-    --background-color-accent: #26282c;
-    --background-color-accent-light: #40464b;
-    --font-color: #fff;
+    --primary-color: #36393f;
+    --primary-color-accent-dark: #2f3136;
+    --primary-color-accent-darker: #232528;
+    --primary-color-accent-3: #292b2f;
+    --primary-color-accent-light: #40444b;
+    --primary-color-accent-5: #3b3e45;
+   
+    --font-primary: #fff;
+    --font-secondary: #96989d;
 
-    --chat-input-font-color: lightgray;
-    --chat-input-background-color: #40464b;
+    --login-background: var(--primary-color);
+    --login-modal-background: var(--primary-color-accent-dark);
+    --login-modal-font: var(--font-primary);
+    --login-button: #e2001a;
+    --login-button-font: var(--font-primary);
+    --login-button-hover: #FF1934;
 
-    --button-color: #e2001a;
-    --button-hover-color: #FF1934;
+    --sidebar-background: var(--primary-color-accent-dark);
+    --sidebar-top-background: var(--primary-color-accent-dark);
+    --sidebar-top-font: var(--font-primary);
+    --sidebar-top-border: var(--primary-color-accent-darker);
+
+    --sidebar-add-chat-hover: var(--font-primary);
+    --sidebar-channels-header-background: var(--primary-color-accent-dark);
+    --sidebar-channels-header-font: var(--font-secondary);
+
+    --sidebar-channel-font: var(--font-secondary);
+    --sidebar-channel-background: var(--primary-color-accent-dark);
+    --sidebar-channel-font-hover: var(--font-primary);
+    --sidebar-channel-background-hover: var(--primary-color-accent-5);
+
+    --sidebar-footer-font: var(--font-secondary);
+    --sidebar-footer-name: var(--font-primary);
+    --sidebar-footer-background: var(--primary-color-accent-3);
+    --sidebar-footer-border: rgba(0, 0, 0, 0);
+    --sidebar-footer-icon-hover: var(--font-primary);
+
+    --settings-font: var(--font-primary);
+    --settings-logout-button: #e2001a;
+    --settings-logout-button-hover: #e2001a;
+
+    --message-text: var(--font-primary);
+    --message-timestamp: var(--font-secondary);
+
+    --chat-header-font: var(--font-primary);
+    --chat-header-search-icon: var(--font-secondary);
+    --chat-header-search-background: var(--primary-color-accent-darker);
+    --chat-header-search-text: var(--font-primary);
+    --chat-header-border: var(--primary-color-accent-dark);
+
+    --chat-input-icon: var(--font-secondary);
+    --chat-input-text: var(--font-primary);
+    --chat-input-background: var(--primary-color-accent-light);
+    --chat-input-border: rgba(0, 0, 0, 0);
+    --chat-background: var(--primary-color);
 
     --modal-overlay: rgba(0, 0, 0, 0.2);
-    --modal-background: var(--background-color);
+    --modal-background: var(--primary-color-accent-darker);
     --modal-close-button: #e2001a;
     --modal-close-button-hover: #ff9faa;
-
 }
 
-[data-theme='light'] {
-    --primary-color: rgb(187, 14, 14);
-    --secondary-color: gray;
-    --background-color: #fff;
-    --background-color-accent: #26282c;
-    --background-color-accent-light: #40464b;
-    --font-color: #fff;
+@media (prefers-color-scheme: light) {
 
-    --chat-input-font-color: lightgray;
-    --chat-input-background-color: #40464b;
-
-    --button-color: #e2001a;
-    --button-hover-color: #008fdc;
+    :root {
+        --primary-color: #ffffff;
+        --primary-color-accent-dark: #f2f3f5;
+        --primary-color-accent-darker: #dcdad7;
+        --primary-color-accent-3: #e6e8ea;
+        --primary-color-accent-light: #ebedef;
+        --primary-color-accent-5: #d1d5da;
+       
+        --font-primary: #000000;
+        --font-secondary: #4f5660;
+    }
+    
 }

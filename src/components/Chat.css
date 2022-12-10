@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     flex: 0.8;
-    background-color: var(--background-color-accent);
+    background-color: var(--chat-background);
     height: 100vh;
 }
 
@@ -24,15 +24,15 @@
 }
 
 .chat_input {
-    color: var(--chat-input-font-color);
+    color: var(--chat-input-icon);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     border-radius: 5px;
     margin: 20px;
-    border-top: 1px solid var(--secondary-color);
-    background-color: var(--chat-input-background-color);
+    border-top: 1px solid var(--chat-input-border);
+    background-color: var(--chat-input-background);
 }
 
 .chat_input>form>input {
@@ -41,7 +41,7 @@
     width: 100%;
     border: none;
     outline-width: 0;
-    color: var(--primary-color);
+    color: var(--chat-input-text);
     font-size: large;
 }
 

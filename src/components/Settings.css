@@ -1,0 +1,9 @@
+.settings_logout>button {
+    background-color: var(--button-color);
+    color: var(--primary-color);
+}
+
+.settings_logout>button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--primary-color);
+}

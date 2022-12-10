@@ -1,0 +1,56 @@
+.login {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.login_overlay {
+    border-radius: 10px;
+    height: 45%;
+    min-height: 300px;
+    width: 600px;
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color-accent);
+    color: var(--primary-color);
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+.login_overlay>button {
+    width: 300px;
+    background-color: var(--button-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.login_overlay>button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--primary-color);
+}
+
+
+
+.login_overlay>div>img {
+    object-fit: contain;
+    height: 75px;
+}
+
+.login_overlay>button>.MuiSvgIcon-root {
+    padding-right: 20px;
+}
+
+.login_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_header>img {
+    height: 50px;
+    vertical-align: middle;
+    padding-right: 15px;
+}

@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: gray;
+    --background-color: #2f3135;
+    --background-color-accent: #26282c;
+    --background-color-accent-light: #40464b;
+    --font-color: #fff;
+
+    --chat-input-font-color: lightgray;
+    --chat-input-background-color: #40464b;
+
+    --button-color: #e2001a;
+    --button-hover-color: #FF1934;
+
+    --modal-overlay: rgba(0, 0, 0, 0.2);
+    --modal-background: var(--background-color);
+    --modal-close-button: #e2001a;
+    --modal-close-button-hover: #ff9faa;
+
+}
+
+[data-theme='light'] {
+    --primary-color: rgb(187, 14, 14);
+    --secondary-color: gray;
+    --background-color: #fff;
+    --background-color-accent: #26282c;
+    --background-color-accent-light: #40464b;
+    --font-color: #fff;
+
+    --chat-input-font-color: lightgray;
+    --chat-input-background-color: #40464b;
+
+    --button-color: #e2001a;
+    --button-hover-color: #008fdc;
+}

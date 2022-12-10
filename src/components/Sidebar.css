@@ -1,0 +1,81 @@
+@import "../style/theme.css";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0.2;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.sidebar_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    border-bottom: 3px solid var(--background-color-accent);
+}
+
+.sidebar_top>div>img {
+    height: 50px;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+.sidebar_channels {
+    flex: 1;
+
+}
+
+.sidebar_add_channel {
+    cursor: pointer;
+}
+
+.sidebar_add_channel :hover {
+    color: var(--primary-color);
+}
+
+.sidebar_channels_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.sidebar_channels_heading {
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar_profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    padding: 10px;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.sidebar_profile_info {
+    flex: 1;
+    padding: 10px;
+}
+
+.sidebar_profile_info>h3 {
+    color: var(--font-color);
+}
+
+.sidebar_profile_settings>.MuiSvgIcon-root {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar_profile_settings>.MuiSvgIcon-root:hover {
+    color: var(--primary-color);
+}

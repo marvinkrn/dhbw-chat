@@ -13,7 +13,7 @@ function SidebarChannel({ id, channelName }) {
     })
     )}>
       <h4>
-        <span className="sidebar_channel_icon"><ChatIcon fontSize='medium'/></span>{channelName}
+        <span className="sidebar_channel_icon"><ChatIcon fontSize='medium' /></span>{channelName}
       </h4>
     </div>
   )

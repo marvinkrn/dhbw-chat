@@ -19,7 +19,6 @@ function Chat() {
     const [messages, setMessages] = useState([]);
 
     const dummy = useRef();
-    const leerMsg = "//n";
 
     useEffect(() => {
         if (channelId) {

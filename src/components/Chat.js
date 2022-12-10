@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Chat.css';
 import ChatHeader from './ChatHeader';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
@@ -18,9 +18,12 @@ function Chat() {
 
     const [messages, setMessages] = useState([]);
 
+    const dummy = useRef();
+    const leerMsg = "//n";
+
     useEffect(() => {
         if (channelId) {
-            database.collection('channels').doc(channelId).collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => (
+            database.collection('channels').doc(channelId).collection('messages').orderBy('timestamp', 'asc').onSnapshot(snapshot => (
                 setMessages(snapshot.docs.map((doc) => doc.data()))
             ))
         }
@@ -35,6 +38,7 @@ function Chat() {
         });
 
         setInput("");
+        dummy.current.scrollIntoView({ behavior: 'smooth' });
 
     };
 
@@ -42,7 +46,7 @@ function Chat() {
         <div className='chat'>
             <ChatHeader channelName={channelName} />
 
-            <div className="chat_messages">
+            <div className="chat_messages"> 
                 {messages.map((message) => (
                     <Message
                         timestamp={message.timestamp}
@@ -50,11 +54,16 @@ function Chat() {
                         user={message.user}
                     />
                 ))}
+                <br></br>
+                <br></br>
+                <br></br>
+                <div ref={dummy}></div>
+                           
             </div>
 
             <div className="chat_input">
                 {/*<AddCircleIcon fontSize='large' />*/}
-
+                
                 <form>
                     <input value={input}
                         disabled={!channelId}
@@ -67,8 +76,7 @@ function Chat() {
                     {/*<GifBoxIcon fontSize='large' />*/}
                     <EmojiEmotionsIcon fontSize='large' />
                 </div>
-            </div>
-
+            </div> 
         </div>
     )
 }

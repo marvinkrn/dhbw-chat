@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Chat.css';
 import ChatHeader from './ChatHeader';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
@@ -8,6 +8,7 @@ import { selectUser } from '../features/userSlice';
 import { selectChannelId, selectChannelName } from '../features/appSlice';
 import database from './firebase';
 import firebase from 'firebase/compat/app';
+import { useScrollToBottom } from './scroll';
 
 function Chat() {
     const user = useSelector(selectUser);
@@ -18,15 +19,20 @@ function Chat() {
 
     const [messages, setMessages] = useState([]);
 
+    const ref = useRef();
+    const {scrollToBottom} = useScrollToBottom(ref);
+
     useEffect(() => {
         if (channelId) {
-            database.collection('channels').doc(channelId).collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => (
+            database.collection('channels').doc(channelId).collection('messages').orderBy('timestamp', 'asc').onSnapshot(snapshot => (
                 setMessages(snapshot.docs.map((doc) => doc.data()))
             ))
         }
     }, [channelId]);
 
-    const sendMessage = e => {
+    if (ref.current) {scrollToBottom();}
+
+    function sendMessage(e) {
         e.preventDefault();
         database.collection('channels').doc(channelId).collection('messages').add({
             message: input,
@@ -35,14 +41,14 @@ function Chat() {
         });
 
         setInput("");
+    }
 
-    };
 
     return (
         <div className='chat'>
             <ChatHeader channelName={channelName} />
 
-            <div className="chat_messages">
+            <div ref={ ref } className="chat_messages">
                 {messages.map((message) => (
                     <Message
                         timestamp={message.timestamp}
@@ -50,11 +56,12 @@ function Chat() {
                         user={message.user}
                     />
                 ))}
+                           
             </div>
 
             <div className="chat_input">
                 {/*<AddCircleIcon fontSize='large' />*/}
-
+                
                 <form>
                     <input value={input}
                         disabled={!channelId}
@@ -68,7 +75,6 @@ function Chat() {
                     <EmojiEmotionsIcon fontSize='large' />
                 </div>
             </div>
-
         </div>
     )
 }

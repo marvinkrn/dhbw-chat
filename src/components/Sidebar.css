@@ -1,11 +1,9 @@
-@import "../style/theme.css";
-
 .sidebar {
     display: flex;
     flex-direction: column;
     flex: 0.2;
     height: 100vh;
-    background-color: var(--background-color);
+    background-color: var(--sidebar-background);
 }
 
 .sidebar_top {
@@ -13,9 +11,9 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: var(--background-color);
-    color: var(--font-color);
-    border-bottom: 3px solid var(--background-color-accent);
+    background-color: var(--sidebar-top-background);
+    color: var(--sidebar-top-font);
+    border-bottom: 3px solid var(--sidebar-top-border);
 }
 
 .sidebar_top>div>img {
@@ -26,7 +24,6 @@
 
 .sidebar_channels {
     flex: 1;
-
 }
 
 .sidebar_add_channel {
@@ -34,7 +31,7 @@
 }
 
 .sidebar_add_channel :hover {
-    color: var(--primary-color);
+    color: var(--sidebar-add-chat-hover);
 }
 
 .sidebar_channels_header {
@@ -42,8 +39,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+    background-color: var(--sidebar-channels-header-background);
+    color: var(--sidebar-channels-header-font);
 }
 
 .sidebar_channels_heading {
@@ -56,10 +53,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
+    color: var(--sidebar-footer-font);
+    background-color: var(--sidebar-footer-background);
     padding: 10px;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--sidebar-footer-border);
 }
 
 .sidebar_profile_info {
@@ -68,7 +65,7 @@
 }
 
 .sidebar_profile_info>h3 {
-    color: var(--font-color);
+    color: var(--sidebar-footer-name);
 }
 
 .sidebar_profile_settings>.MuiSvgIcon-root {
@@ -77,5 +74,5 @@
 }
 
 .sidebar_profile_settings>.MuiSvgIcon-root:hover {
-    color: var(--primary-color);
+    color: var(--sidebar-footer-icon-hover);
 }

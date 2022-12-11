@@ -3,7 +3,7 @@
     place-items: center;
     height: 100vh;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--login-background);
 }
 
 .login_overlay {
@@ -13,25 +13,22 @@
     width: 600px;
     display: grid;
     place-items: center;
-    background-color: var(--background-color-accent);
-    color: var(--primary-color);
+    background-color: var(--login-modal-background);
+    color: var(--login-modal-font);
     box-sizing: border-box;
     padding: 32px;
 }
 
 .login_overlay>button {
     width: 300px;
-    background-color: var(--button-color);
-    color: var(--primary-color);
+    background-color: var(--login-button);
+    color: var(--login-button-font);
     font-weight: bold;
 }
 
 .login_overlay>button:hover {
-    background-color: var(--button-hover-color);
-    color: var(--primary-color);
+    background-color: var(--login-button-hover);
 }
-
-
 
 .login_overlay>div>img {
     object-fit: contain;

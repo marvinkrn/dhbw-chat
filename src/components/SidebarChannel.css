@@ -1,16 +1,16 @@
 @import "../style/theme.css";
 
 .sidebar_channel:hover>h4 {
-    color: var(--primary-color);
-    background-color: var(--background-color-accent-light);
+    color: var(--sidebar-channel-font-hover);
+    background-color: var(--sidebar-channel-background-hover);
 }
 
 .sidebar_channel>h4 {
     display: flex;
     padding-left: 15px;
     align-items: center;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+    background-color: var(--sidebar-channel-background);
+    color: var(--sidebar-channel-font);
     cursor: pointer;
 }
 

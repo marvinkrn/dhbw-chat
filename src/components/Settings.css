@@ -1,9 +1,61 @@
 .settings_logout>button {
     background-color: var(--settings-logout-button);
-    color: var(--settings-font);
+    color: var(--settings-logout-button-font);
+    width: 150px;
+    font-weight: bold;
 }
 
 .settings_logout>button:hover {
     background-color: var(--settings-logout-button-hover);
+    color: var(--settings-logout-button-font);
+}
+
+
+
+
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings_header {
     color: var(--settings-font);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--settings-header-border);
+}
+
+.settings>h3 {
+    color: var(--settings-font);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.settings>h4 {
+    color: var(--font-secondary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.settings_logout {
+    border-top: 1px solid var(--settings-header-border);
+    padding-top: 20px;
+}
+
+.settings_section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.settings_section>button {
+    margin-top: 5px;
+    background-color: var(--settings-section-button);
+    color: var(--settings-section-button-font);
+    text-transform: none;
+}
+
+.settings_section>button:hover {
+    background-color: var(--settings-section-button-hover);
+    color: var(--settings-section-button-font);
 }

@@ -13,7 +13,6 @@ function App() {
   const dispatch = useDispatch(); //dispatch into data layer
   const user = useSelector(selectUser);
 
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
 
@@ -30,6 +29,9 @@ function App() {
     });
   }, [dispatch]);
 
+
+
+  
   return (
     <div className="app">
       {user ? (

@@ -64,7 +64,7 @@ function Sidebar() {
             <div className="sidebar_channels">
                 <div className="sidebar_channels_header">
                     <div className="sidebar_channels_heading">
-                        <h4>Chats</h4>
+                        <h4>Channels</h4>
                     </div>
                     <div className='sidebar_add_channel'>
                         <AddIcon onClick={handleAddChannel} />

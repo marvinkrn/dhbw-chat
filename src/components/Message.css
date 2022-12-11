@@ -1,6 +1,6 @@
 .message {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     color: var(--message-text);
 }
@@ -13,4 +13,14 @@
     color: var(--message-timestamp);
     margin-left: 20px;
     font-size: small;
+}
+
+.message_content img {
+    max-width: 100%;
+    max-height: 400px;
+    padding-top: 10px;
+}
+
+.message_content a {
+    color: var(--message-link);
 }

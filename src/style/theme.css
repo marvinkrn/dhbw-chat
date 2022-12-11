@@ -1,4 +1,4 @@
-:root {
+:root, :root.dark  {
     --primary-color: #36393f;
     --primary-color-accent-dark: #2f3136;
     --primary-color-accent-darker: #232528;
@@ -7,13 +7,14 @@
     --primary-color-accent-5: #3b3e45;
    
     --font-primary: #fff;
+    --font-button: #fff;
     --font-secondary: #96989d;
 
     --login-background: var(--primary-color);
     --login-modal-background: var(--primary-color-accent-dark);
     --login-modal-font: var(--font-primary);
     --login-button: #e2001a;
-    --login-button-font: var(--font-primary);
+    --login-button-font: var(--font-button);
     --login-button-hover: #FF1934;
 
     --sidebar-background: var(--primary-color-accent-dark);
@@ -37,11 +38,19 @@
     --sidebar-footer-icon-hover: var(--font-primary);
 
     --settings-font: var(--font-primary);
+    --settings-header-border: var(--primary-color-accent-light);
+
+    --settings-section-button-font: var(--font-button);
+    --settings-section-button: #5865f2;
+    --settings-section-button-hover: #6975f3;
+
+    --settings-logout-button-font: var(--font-button);
     --settings-logout-button: #e2001a;
-    --settings-logout-button-hover: #e2001a;
+    --settings-logout-button-hover: #FF1934;
 
     --message-text: var(--font-primary);
     --message-timestamp: var(--font-secondary);
+    --message-link: #FF1934;
 
     --chat-header-font: var(--font-primary);
     --chat-header-search-icon: var(--font-secondary);
@@ -55,14 +64,13 @@
     --chat-input-border: rgba(0, 0, 0, 0);
     --chat-background: var(--primary-color);
 
-    --modal-overlay: rgba(0, 0, 0, 0.2);
-    --modal-background: var(--primary-color-accent-darker);
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+    --modal-background: var(--primary-color);
     --modal-close-button: #e2001a;
     --modal-close-button-hover: #ff9faa;
 }
 
 @media (prefers-color-scheme: light) {
-
     :root {
         --primary-color: #ffffff;
         --primary-color-accent-dark: #f2f3f5;
@@ -74,5 +82,18 @@
         --font-primary: #000000;
         --font-secondary: #4f5660;
     }
-    
+
 }
+
+:root.light {
+        --primary-color: #ffffff;
+        --primary-color-accent-dark: #f2f3f5;
+        --primary-color-accent-darker: #dcdad7;
+        --primary-color-accent-3: #e6e8ea;
+        --primary-color-accent-light: #ebedef;
+        --primary-color-accent-5: #d1d5da;
+       
+        --font-primary: #000000;
+        --font-secondary: #4f5660;
+    }
+

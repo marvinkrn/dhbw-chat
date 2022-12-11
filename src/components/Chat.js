@@ -34,11 +34,12 @@ function Chat() {
 
     function sendMessage(e) {
         e.preventDefault();
+        if (input){
         database.collection('channels').doc(channelId).collection('messages').add({
             message: input,
             user: user,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        });
+        });}
 
         setInput("");
     }
@@ -65,6 +66,7 @@ function Chat() {
                 <form>
                     <input value={input}
                         disabled={!channelId}
+                        onload={()=> scrollToBottom()}
                         onChange={e => setInput(e.target.value)} placeholder={channelName != null ? `Nachricht an ${channelName}` : 'Kein Channel ausgewählt'} />
 
 

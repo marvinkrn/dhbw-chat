@@ -8,6 +8,7 @@ import { selectUser } from '../features/userSlice';
 import { selectChannelId, selectChannelName } from '../features/appSlice';
 import database from './firebase';
 import firebase from 'firebase/compat/app';
+import { useScrollToBottom } from './scroll';
 
 function Chat() {
     const user = useSelector(selectUser);
@@ -18,7 +19,8 @@ function Chat() {
 
     const [messages, setMessages] = useState([]);
 
-    const dummy = useRef();
+    const ref = useRef();
+    const {scrollToBottom} = useScrollToBottom(ref);
 
     useEffect(() => {
         if (channelId) {
@@ -28,7 +30,9 @@ function Chat() {
         }
     }, [channelId]);
 
-    const sendMessage = e => {
+    if (ref.current) {scrollToBottom();}
+
+    function sendMessage(e) {
         e.preventDefault();
         database.collection('channels').doc(channelId).collection('messages').add({
             message: input,
@@ -37,15 +41,14 @@ function Chat() {
         });
 
         setInput("");
-        dummy.current.scrollIntoView({ behavior: 'smooth' });
+    }
 
-    };
 
     return (
         <div className='chat'>
             <ChatHeader channelName={channelName} />
 
-            <div className="chat_messages"> 
+            <div ref={ ref } className="chat_messages">
                 {messages.map((message) => (
                     <Message
                         timestamp={message.timestamp}
@@ -53,10 +56,6 @@ function Chat() {
                         user={message.user}
                     />
                 ))}
-                <br></br>
-                <br></br>
-                <br></br>
-                <div ref={dummy}></div>
                            
             </div>
 
@@ -75,7 +74,7 @@ function Chat() {
                     {/*<GifBoxIcon fontSize='large' />*/}
                     <EmojiEmotionsIcon fontSize='large' />
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }

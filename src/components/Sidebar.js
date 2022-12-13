@@ -70,7 +70,6 @@ function Sidebar() {
                 <Avatar src={user.photo} />
                 <div className="sidebar_profile_info">
                     <h3>{user.displayName}</h3>
-                    <p>{user.uid}</p>
                 </div>
 
                 <div className="sidebar_profile_settings">

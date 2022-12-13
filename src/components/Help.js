@@ -36,7 +36,7 @@ function Help() {
           <li>:O 😮</li>
           <li>;) 😉</li>
           <li>8) 😎</li>
-          <li>>:@ 😡</li>
+          <li>&gt;:@ 😡</li>
         </ul>
 
       </div>

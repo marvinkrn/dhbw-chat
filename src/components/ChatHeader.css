@@ -13,6 +13,22 @@
     color: var(--chat-header-font);
 }
 
+.chat_header_right {
+    display: flex;
+    flex: 0;
+    align-items: center;
+    color: var(--font-secondary);
+}
+
+.chat_header_right>.MuiSvgIcon-root {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.chat_header_right>.MuiSvgIcon-root:hover {
+    color: var(--font-primary);
+}
+
 .chat_header_left>.MuiSvgIcon-root {
     padding: 10px;
 }

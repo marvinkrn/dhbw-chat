@@ -10,32 +10,26 @@
     color: var(--settings-logout-button-font);
 }
 
-
-
-
-.settings {
+.inner_modal {
     display: flex;
     flex-direction: column;
 }
 
-.settings_header {
+.inner_modal>h2 {
     color: var(--settings-font);
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--settings-header-border);
 }
 
-.settings>h3 {
+.inner_modal>h3 {
     color: var(--settings-font);
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.settings>h4 {
-    color: var(--font-secondary);
-    padding-top: 5px;
-    padding-bottom: 5px;
-
+.settings_section>h4 {
+    color: var(--font-primary);
 }
 
 .settings_logout {

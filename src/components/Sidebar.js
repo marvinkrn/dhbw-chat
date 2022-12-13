@@ -8,7 +8,7 @@ import { selectUser } from '../features/userSlice';
 import { useSelector } from 'react-redux';
 import database from './firebase';
 import Tooltip from '@mui/material/Tooltip';
-import SettingsModal from './SettingsModal';
+import SettingsModal from './Modal';
 import Settings from './Settings';
 
 function Sidebar() {
@@ -28,17 +28,6 @@ function Sidebar() {
         );
     }, []);
 
-
-    useEffect(() => {
-        const close = (e) => {
-            if (e.keyCode === 27)
-                setSettingsModal(false);
-
-        }
-        window.addEventListener('keydown', close)
-        return () => window.removeEventListener('keydown', close)
-    }, []);
-
     const handleAddChannel = () => {
         const channelName = prompt("Chat hinzufügen:");
 
@@ -48,8 +37,6 @@ function Sidebar() {
             })
         }
     }
-
-
 
     return (
         <div className='sidebar'>

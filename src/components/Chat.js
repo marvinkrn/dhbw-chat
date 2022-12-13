@@ -10,6 +10,7 @@ import database from './firebase';
 import firebase from 'firebase/compat/app';
 import { useScrollToBottom } from './scroll';
 
+
 function Chat() {
     const user = useSelector(selectUser);
     const channelId = useSelector(selectChannelId);

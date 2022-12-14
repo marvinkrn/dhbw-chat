@@ -10,7 +10,7 @@ function Help() {
         <h4>Nachrichten absenden</h4>
         <p>Nachrichten können mit Enter abgesendet werden.</p>
       </div>
-      
+
       <h3>Chat Formatierung</h3>
 
       <div className="settings_section">
@@ -21,7 +21,6 @@ function Help() {
           <li>Durchgestrichen schreiben: ~~Text~~</li>
           <li>Bilder einfügen: ![Alt Text](Bild URL)</li>
         </ul>
-
 
       </div>
       <div className="settings_section">

@@ -4,11 +4,11 @@ import AddIcon from '@mui/icons-material/Add';
 import Avatar from '@mui/material/Avatar';
 import SidebarChannel from './SidebarChannel';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { selectUser } from '../features/userSlice';
+import { selectUser } from '../../features/userSlice';
 import { useSelector } from 'react-redux';
-import database from './firebase';
-import Modal from './Modal';
-import Settings from './Settings';
+import database from '../general/firebase';
+import Modal from '../modal/Modal';
+import Settings from '../modal/Settings';
 
 function Sidebar() {
 
@@ -32,7 +32,7 @@ function Sidebar() {
 
         if (channelName) {
             database.collection('channels').add({
-                channelName: channelName, //fires useEffect Listener oben
+                channelName: channelName, // fires useEffect listener oben
             })
         }
     }

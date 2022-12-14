@@ -3,9 +3,9 @@ import './Chat.css';
 import ChatHeader from './ChatHeader';
 import Message from './Message';
 import { useSelector } from 'react-redux';
-import { selectUser } from '../features/userSlice';
-import { selectChannelId, selectChannelName } from '../features/appSlice';
-import database from './firebase';
+import { selectUser } from '../../features/userSlice';
+import { selectChannelId, selectChannelName } from '../../features/appSlice';
+import database from '../general/firebase';
 import firebase from 'firebase/compat/app';
 
 function Chat() {
@@ -38,7 +38,6 @@ function Chat() {
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
         }
-
         setInput("");
     }
 

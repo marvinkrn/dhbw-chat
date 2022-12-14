@@ -1,5 +1,3 @@
-@import "../style/theme.css";
-
 .sidebar_channel:hover>h4 {
     color: var(--sidebar-channel-font-hover);
     background-color: var(--sidebar-channel-background-hover);

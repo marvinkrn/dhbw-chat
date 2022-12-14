@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import Chat from './components/Chat';
-import Sidebar from './components/Sidebar';
+import Chat from './components/chat/Chat';
+import Sidebar from './components/sidebar/Sidebar';
 import { selectUser } from './features/userSlice';
-import Login from './components/Login';
+import Login from './components/login/Login';
 
 import { login, logout } from './features/userSlice';
-import { auth } from './components/firebase';
+import { auth } from './components/general/firebase';
 
 function App() {
   const dispatch = useDispatch(); //dispatch into data layer

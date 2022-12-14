@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import { auth } from './firebase';
+import { auth } from '../general/firebase';
 import "./InnerModal.css";
 
 function Settings() {
@@ -23,7 +23,6 @@ function Settings() {
 
     return (
         <div className='inner_modal'>
-
             <h2>Einstellungen</h2>
 
             <h3>Erscheinungsbild</h3>
@@ -31,10 +30,7 @@ function Settings() {
             <div className="settings_section">
                 <h4 id="resizeTxt">Farbschema</h4>
                 <Button id="test_btn" onClick={() => toggleMode()} >Farbschema wechseln</Button>
-
             </div>
-
-        
 
             <div className='settings_logout'>
                 <Button onClick={() => auth.signOut()} style={{ textTransform: 'none' }}> Abmelden</Button>

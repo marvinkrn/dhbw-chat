@@ -7,7 +7,6 @@ import remarkGfm from "remark-gfm";
 
 function Message({ timestamp, user, message }) {
 
-
   const replaceStringWithEmoji = (string) => {
     const emojiMap = {
       ':)': '😊',
@@ -20,9 +19,8 @@ function Message({ timestamp, user, message }) {
       '>:@': '😡',
     };
     let regex = /(?::\)|:\(|:D|;\(|:O'|;\)|8\)|>:@)/g
-    return string.replace(regex,(m)=>emojiMap[m] || m)
+    return string.replace(regex, (m) => emojiMap[m] || m)
   };
-
 
   return (
     <div className='message'>

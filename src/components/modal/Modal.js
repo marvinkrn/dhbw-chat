@@ -7,7 +7,7 @@ function SettingsModal(props) {
     useEffect(() => {
         const close = (e) => {
             if (e.keyCode === 27)
-            props.setTrigger(false)
+                props.setTrigger(false)
 
         }
         window.addEventListener('keydown', close)
@@ -20,7 +20,6 @@ function SettingsModal(props) {
 
                 <CloseIcon onClick={() => props.setTrigger(false)} />
                 <p>ESC</p>
-
 
                 {props.children}
             </div>

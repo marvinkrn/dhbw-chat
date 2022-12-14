@@ -3,8 +3,8 @@ import './ChatHeader.css';
 import ChatIcon from '@mui/icons-material/Chat';
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
 import HelpIcon from '@mui/icons-material/Help';
-import Help from './Help';
-import Modal from './Modal';
+import Help from '../modal/Help';
+import Modal from '../modal/Modal';
 
 function ChatHeader({ channelName }) {
 
@@ -20,10 +20,6 @@ function ChatHeader({ channelName }) {
       </div>
 
       <div className="chat_header_right">
-        {/**<div className="chat_header_search">
-          <input placeholder='Suche' />
-          <SearchIcon />
-          </div>**/}
         <HelpIcon onClick={() => setModal(true)} />
 
         <Modal trigger={modal} setTrigger={setModal}>

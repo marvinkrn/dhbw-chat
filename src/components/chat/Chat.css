@@ -1,3 +1,5 @@
+@import "../../style/theme.css";
+
 .chat {
     display: flex;
     flex-direction: column;
@@ -17,10 +19,10 @@
 }
 
 .chat_messages {
-    -ms-overflow-style: none;
     /* IE / Edge */
-    scrollbar-width: none;
+    -ms-overflow-style: none;
     /* Firefox */
+    scrollbar-width: none;
 }
 
 .chat_input {
@@ -46,7 +48,7 @@
 }
 
 .chat_input>form {
-    /*flex: 1 nimmt so viel raum wie möglich*/
+    /*flex: 1 - Nimmt so viel Raum wie möglich*/
     flex: 1;
 }
 

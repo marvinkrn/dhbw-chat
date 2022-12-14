@@ -1,4 +1,4 @@
-.settings_overlay {
+.modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,20 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.settings_inner {
+.modal_inner {
     position: relative;
     padding: 32px;
     width: 100%;
     max-width: 640px;
     background-color: var(--modal-background);
     border-radius: 10px;
-
 }
 
-.settings_inner>p {
+.modal_inner>p {
     position: absolute;
     top: 40px;
     right: 22px;
@@ -30,14 +28,14 @@
     font-size: 0.75em;
 }
 
-.settings_inner>.MuiSvgIcon-root {
+.modal_inner>.MuiSvgIcon-root {
     position: absolute;
     top: 20px;
     right: 20px;
     color: var(--modal-close-button);
 }
 
-.settings_inner>.MuiSvgIcon-root:hover {
+.modal_inner>.MuiSvgIcon-root:hover {
     cursor: pointer;
     color: var(--modal-close-button-hover);
 }

@@ -15,8 +15,8 @@ function SettingsModal(props) {
     }, [props]);
 
     return (props.trigger && (
-        <div className='settings_overlay'>
-            <div className="settings_inner">
+        <div className='modal_overlay'>
+            <div className="modal_inner">
 
                 <CloseIcon onClick={() => props.setTrigger(false)} />
                 <p>ESC</p>

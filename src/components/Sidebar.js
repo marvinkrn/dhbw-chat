@@ -7,15 +7,14 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { selectUser } from '../features/userSlice';
 import { useSelector } from 'react-redux';
 import database from './firebase';
-import Tooltip from '@mui/material/Tooltip';
-import SettingsModal from './Modal';
+import Modal from './Modal';
 import Settings from './Settings';
 
 function Sidebar() {
 
     const user = useSelector(selectUser);
     const [channels, setChannels] = useState([]);
-    const [settingsModal, setSettingsModal] = useState(false);
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
         database.collection('channels').onSnapshot(snapshot =>
@@ -73,28 +72,12 @@ function Sidebar() {
                 </div>
 
                 <div className="sidebar_profile_settings">
-                    <Tooltip title="Einstellungen" arrow
-                        componentsProps={{
-                            tooltip: {
-                                sx: {
-                                    bgcolor: 'common.black',
-                                    fontSize: 15,
 
-                                    '& .MuiTooltip-arrow': {
-                                        color: 'common.black',
-                                    },
+                    <SettingsIcon onClick={() => setModal(true)} />
 
-                                },
-                            },
-                        }}>
-
-                        <SettingsIcon onClick={() => setSettingsModal(true)} />
-
-                    </Tooltip>
-
-                    <SettingsModal trigger={settingsModal} setTrigger={setSettingsModal} >
+                    <Modal trigger={modal} setTrigger={setModal} >
                         <Settings />
-                    </SettingsModal>
+                    </Modal>
 
                 </div>
 

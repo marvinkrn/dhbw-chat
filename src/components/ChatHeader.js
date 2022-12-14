@@ -4,11 +4,11 @@ import ChatIcon from '@mui/icons-material/Chat';
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
 import HelpIcon from '@mui/icons-material/Help';
 import Help from './Help';
-import SettingsModal from './Modal';
+import Modal from './Modal';
 
 function ChatHeader({ channelName }) {
 
-  const [settingsModal, setSettingsModal] = useState(false);
+  const [modal, setModal] = useState(false);
 
   return (
     <div className='chat_header'>
@@ -24,11 +24,11 @@ function ChatHeader({ channelName }) {
           <input placeholder='Suche' />
           <SearchIcon />
           </div>**/}
-        <HelpIcon onClick={() => setSettingsModal(true)} />
+        <HelpIcon onClick={() => setModal(true)} />
 
-        <SettingsModal trigger={settingsModal} setTrigger={setSettingsModal}>
+        <Modal trigger={modal} setTrigger={setModal}>
           <Help />
-        </SettingsModal>
+        </Modal>
       </div>
 
 

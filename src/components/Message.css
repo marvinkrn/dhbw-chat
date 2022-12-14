@@ -15,6 +15,10 @@
     font-size: small;
 }
 
+.message_content p {
+    font-size: 1rem;
+}
+
 .message_content img {
     max-width: 100%;
     max-height: 400px;

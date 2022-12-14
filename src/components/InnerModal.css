@@ -53,3 +53,12 @@
     background-color: var(--settings-section-button-hover);
     color: var(--settings-section-button-font);
 }
+
+.settings_fontSize>.MuiSvgIcon-root {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.settings_fontSize>.MuiSvgIcon-root:hover {
+    color: var(--font-primary);
+}

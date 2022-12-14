@@ -51,3 +51,30 @@
     vertical-align: middle;
     padding-right: 15px;
 }
+.accept_button{
+    margin-top: 5px;
+    background-color: var(--settings-section-button);
+    color: var(--settings-section-button-font);
+    text-transform: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin-left: 230px;
+    border-radius: 10px;
+}
+.accept_button:hover{
+    background-color: var(--settings-section-button-hover);
+    color: var(--settings-section-button-font);
+}
+
+.settings_inner>.MuiSvgIcon-root {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--modal-close-button);
+    display: none;
+}
+.settings_inner>p {
+    display:none;
+}

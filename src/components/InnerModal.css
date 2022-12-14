@@ -53,3 +53,10 @@
     background-color: var(--settings-section-button-hover);
     color: var(--settings-section-button-font);
 }
+
+.info_text {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--settings-font);
+}

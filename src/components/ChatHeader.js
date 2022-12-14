@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './ChatHeader.css';
 import ChatIcon from '@mui/icons-material/Chat';
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';

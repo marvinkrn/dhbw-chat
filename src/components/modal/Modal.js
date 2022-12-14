@@ -2,13 +2,12 @@ import "./Modal.css";
 import CloseIcon from '@mui/icons-material/Close';
 import { useEffect } from "react";
 
-function SettingsModal(props) {
+function Modal(props) {
 
     useEffect(() => {
         const close = (e) => {
             if (e.keyCode === 27)
-                props.setTrigger(false)
-
+                props.setTrigger(false);
         }
         window.addEventListener('keydown', close)
         return () => window.removeEventListener('keydown', close)
@@ -27,4 +26,4 @@ function SettingsModal(props) {
     ));
 }
 
-export default SettingsModal
+export default Modal

@@ -28,7 +28,7 @@ function Sidebar() {
     }, []);
 
     const handleAddChannel = () => {
-        const channelName = prompt("Chat hinzufügen:");
+        const channelName = prompt("Name für neuen Channel eingeben:");
 
         if (channelName) {
             database.collection('channels').add({

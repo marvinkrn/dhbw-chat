@@ -63,6 +63,7 @@
     margin-left: 230px;
     border-radius: 10px;
 }
+
 .accept_button:hover{
     background-color: var(--settings-section-button-hover);
     color: var(--settings-section-button-font);
@@ -73,8 +74,4 @@
     top: 20px;
     right: 20px;
     color: var(--modal-close-button);
-    display: none;
-}
-.modal_inner>p {
-    display:none;
 }

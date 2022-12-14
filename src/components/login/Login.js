@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import { auth, provider } from '../general/firebase';
 import './Login.css';
 import GoogleIcon from '@mui/icons-material/Google';
-import Datainfo from '../modal/Datainfo';
-import SettingsModal from '../modal/Modal';
+import DataInfo from '../modal/DataInfo';
+import LoginModal from '../modal/LoginModal';
 
 function Login() {
 
@@ -17,10 +17,10 @@ function Login() {
   return (
     <div className='login'>
 
-        <SettingsModal trigger={settingsModal} setTrigger={setSettingsModal}>
-          <Datainfo />
+        <LoginModal trigger={settingsModal} setTrigger={setSettingsModal}>
+          <DataInfo />
           <Button class="accept_button" onClick={() => setSettingsModal(false)} >Ich stimme zu</Button>
-        </SettingsModal>
+        </LoginModal>
 
       <div className="login_overlay">
         <div className="login_header">

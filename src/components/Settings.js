@@ -2,7 +2,6 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { auth } from './firebase';
 import "./InnerModal.css";
-import FontDownloadIcon from '@mui/icons-material/FontDownload';
 
 function Settings() {
 
@@ -31,19 +30,11 @@ function Settings() {
 
             <div className="settings_section">
                 <h4 id="resizeTxt">Farbschema</h4>
-                <Button onClick={() => toggleMode()} >Farbschema wechseln</Button>
+                <Button id="test_btn" onClick={() => toggleMode()} >Farbschema wechseln</Button>
 
             </div>
 
-            <div className="settings_section">
-                <h4 >Schriftgröße</h4>
-                <div className='settings_fontSize'>
-                    <FontDownloadIcon fontSize="small"/>
-                    <FontDownloadIcon fontSize="medium" />
-                    <FontDownloadIcon fontSize="large" />
-                </div>
-            </div>
-
+        
 
             <div className='settings_logout'>
                 <Button onClick={() => auth.signOut()} style={{ textTransform: 'none' }}> Abmelden</Button>

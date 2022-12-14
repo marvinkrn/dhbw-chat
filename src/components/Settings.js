@@ -35,6 +35,15 @@ function Settings() {
 
             </div>
 
+            <div className="settings_section">
+                <h4 >Schriftgröße</h4>
+                <div className='settings_fontSize'>
+                    <FontDownloadIcon fontSize="small"/>
+                    <FontDownloadIcon fontSize="medium" />
+                    <FontDownloadIcon fontSize="large" />
+                </div>
+            </div>
+
             <div className='settings_logout'>
                 <Button onClick={() => auth.signOut()} style={{ textTransform: 'none' }}> Abmelden</Button>
             </div>

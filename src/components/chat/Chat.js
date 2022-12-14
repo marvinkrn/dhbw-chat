@@ -28,6 +28,11 @@ function Chat() {
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: 'instant' });
     }, [messages]);
+    
+    useEffect(() => {
+        if (channelName != null)
+            document.title = `${channelName} | DHBW Chat | Web-Engineering`;
+    }, [channelName])
 
     function sendMessage(e) {
         e.preventDefault();
